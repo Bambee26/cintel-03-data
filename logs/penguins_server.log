@@ -1,10 +1,7 @@
-2023-07-11 14:14:28,414.penguins_server.INFO =============================================================
-2023-07-11 14:14:28,414.penguins_server.INFO Today is 2023-07-11 at 02:14 PM
-2023-07-11 14:14:28,414.penguins_server.INFO This file is running on: nt Windows 10
-2023-07-11 14:14:28,414.penguins_server.INFO The Python version is: 3.11.4
-2023-07-11 14:14:28,414.penguins_server.INFO The active environment path is:   C:\Users\bambe\Documents\NWMSU\44630_ContinousIntelligence\cintel-03-data\cintel-03-data\.venv
-2023-07-11 14:14:28,420.penguins_server.INFO The current working directory is: C:\Users\bambe\Documents\NWMSU\44630_ContinousIntelligence\cintel-03-data\cintel-03-data
-2023-07-11 14:14:28,421.penguins_server.INFO =============================================================
-2023-07-11 14:14:37,470.penguins_server.DEBUG filter message: Showing 344 records
-2023-07-11 14:14:37,470.penguins_server.DEBUG Triggered penguin_filter_record_count_string
-2023-07-11 14:14:37,470.penguins_server.DEBUG Triggered penguins_filtered_table
+2023-07-11 14:22:26,155.penguins_server.INFO =============================================================
+2023-07-11 14:22:26,155.penguins_server.INFO Today is 2023-07-11 at 02:22 PM
+2023-07-11 14:22:26,155.penguins_server.INFO This file is running on: nt Windows 10
+2023-07-11 14:22:26,155.penguins_server.INFO The Python version is: 3.11.4
+2023-07-11 14:22:26,155.penguins_server.INFO The active environment path is:   C:\Users\bambe\Documents\NWMSU\44630_ContinousIntelligence\cintel-03-data\cintel-03-data\.venv
+2023-07-11 14:22:26,155.penguins_server.INFO The current working directory is: C:\Users\bambe\Documents\NWMSU\44630_ContinousIntelligence\cintel-03-data\cintel-03-data
+2023-07-11 14:22:26,155.penguins_server.INFO =============================================================

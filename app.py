@@ -32,10 +32,10 @@ app_ui = ui.page_navbar(
                 ui.h2("Sidebar Panel"),
                 ui.tags.hr(),
                 ui.h3("User Interaction Here"),
-                ui.input_text("name_input", "Enter your name", placeholder="Your Name"),
+                ui.input_text("name_input", "Hi! What's your name?", placeholder="Your Name"),
                 ui.input_text(
                     "language_input",
-                    "Enter your favorite language(s)",
+                    "What are your favorite language(s)",
                     placeholder="Favorite Programming Language(s)",
                 ),
                 ui.tags.hr(),
