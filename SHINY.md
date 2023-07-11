@@ -1,6 +1,6 @@
 # Interactive Analytics with Shiny
 
-We follow the same, consistent process to create and deploy a new Shiny app. Repeating these common tasks helps build skills and comfort with professional tools and processes. The instructions become more concise as we repeat things. For more detailed instructions, refer back to the earlier [SHINY.md](https://github.com/denisecase/cintel-02-app/blob/main/SHINY.md).
+We follow the same, consistent process to create and deploy a new Shiny app. Repeating these common tasks helps build skills and comfort with professional tools and processes. The instructions become more concise as we repeat things. For more detailed instructions, refer back to the earlier [SHINY.md](https://github.com/bambee26/cintel-02-app/blob/main/SHINY.md).
 
 ## Create a Virtual Environment
 
@@ -22,7 +22,7 @@ python -m pip install --upgrade -r requirements.txt
 ```
 
 🚀 Rocket Tip: When installing packages, spend a bit of time finding out what they are, where they go, and how you can use them to improve your work. 
-Here's a short list of the [developer tools](https://github.com/denisecase/license-tracking/tree/main#open-source-python-developer-tools) and other [requirements](https://github.com/denisecase/license-tracking/tree/main#open-source-python-external-libraries). 
+Here's a short list of the [developer tools](https://github.com/bambee26/license-tracking/tree/main#open-source-python-developer-tools) and other [requirements](https://github.com/bambee26/license-tracking/tree/main#open-source-python-external-libraries). 
 
 🚀 Rocket Tip: Format Python code automatically with Black. 
 We've already installed [Black](https://pypi.org/project/black/) in our virtual environment.
@@ -52,7 +52,7 @@ and configure the same 3 repository secrets as we did for our last repo.
 The keys and values are exactly the same. 
 Login to [shinyapps.io](https://www.shinyapps.io/) to retrieve the values (you cannot retrieve them from GitHub). I log in via my GitHub account so I don't have to look up a password each time we do this. Go to Account / Tokens to find the values.
 
-See the earlier [SHINYAPPS.md](https://github.com/denisecase/cintel-02-app/blob/main/SHINYAPPS.md) for details.
+See the earlier [SHINYAPPS.md](https://github.com/bambee26/cintel-02-app/blob/main/SHINYAPPS.md) for details.
 
 - Name: SHINYAPPS_ACCOUNT
 - Secret: Paste or type your shinyapps.io account name.
