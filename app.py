@@ -24,7 +24,7 @@ from util_logger import setup_logger
 logger, logname = setup_logger(__name__)
 
 app_ui = ui.page_navbar(
-    shinyswatch.theme.minty(),
+    shinyswatch.theme.flatly(),
     ui.nav(
         "Home",
         ui.layout_sidebar(
@@ -32,11 +32,11 @@ app_ui = ui.page_navbar(
                 ui.h2("Sidebar Panel"),
                 ui.tags.hr(),
                 ui.h3("User Interaction Here"),
-                ui.input_text("name_input", "Enter your name", placeholder="Your Name"),
+                ui.input_text("name_input", "What's your name?", placeholder="Your Name"),
                 ui.input_text(
                     "language_input",
-                    "Enter your favorite language(s)",
-                    placeholder="Favorite Programming Language(s)",
+                    "Now, tell me your favorite language(s)",
+                    placeholder="Fave Language(s)",
                 ),
                 ui.tags.hr(),
             ),
@@ -74,12 +74,12 @@ app_ui = ui.page_navbar(
             get_penguins_outputs(),
         ),
     ),
-    ui.nav(ui.a("About", href="https://github.com/denisecase")),
-    ui.nav(ui.a("GitHub", href="https://github.com/denisecase/cintel-03-data")),
-    ui.nav(ui.a("App", href="https://denisecase.shinyapps.io/cintel-03-data/")),
+    ui.nav(ui.a("About", href="https://github.com/bambee26")),
+    ui.nav(ui.a("GitHub", href="https://github.com/bambee26/cintel-03-data")),
+    ui.nav(ui.a("App", href="https://bambee26.shinyapps.io/cintel-03-data/")),
     ui.nav(ui.a("Examples", href="https://shinylive.io/py/examples/")),
     ui.nav(ui.a("Themes", href="https://bootswatch.com/")),
-    title=ui.h1("Case Dashboard"),
+    title=ui.h1("Bambee's Dashboard"),
 )
 
 
@@ -90,7 +90,7 @@ def server(input, output, session):
     @render.text
     def welcome_output():
         user = input.name_input()
-        welcome_string = f"Greetings {user}!"
+        welcome_string = f"Hello {user}!"
         return welcome_string
 
     @output
@@ -98,7 +98,7 @@ def server(input, output, session):
     def insights_output():
         answer = input.language_input()
         count = len(answer)
-        language_string = f"You like {answer}. That takes {count} characters"
+        language_string = f"You like {answer}. Is that true? Your answer took {count} characters."
         return language_string
 
     get_mtcars_server_functions(input, output, session)
