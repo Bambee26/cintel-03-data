@@ -19,16 +19,12 @@ from penguins_server import get_penguins_server_functions
 from penguins_ui_inputs import get_penguins_inputs
 from penguins_ui_outputs import get_penguins_outputs
 
-from iris_server import get_iris_server_functions
-from iris_ui_inputs import get_iris_inputs
-from iris_ui_outputs import get_iris_outputs
-
 from util_logger import setup_logger
 
 logger, logname = setup_logger(__name__)
 
 app_ui = ui.page_navbar(
-    shinyswatch.theme.quartz(),
+    shinyswatch.theme.flatly(),
     ui.nav(
         "Home",
         ui.layout_sidebar(
@@ -37,10 +33,8 @@ app_ui = ui.page_navbar(
                 ui.tags.hr(),
                 ui.h3("Let's get to know you!"),
                 ui.input_text("name_input", "Hi! What's your name?", placeholder="Your Name"),
-                ui.input_text(
-                    "language_input",
-                    "What are your favorite language(s)?",
-                    placeholder="Fave Language(s)",
+                ui.input_text("vacation_input", "Now, tell me your favorite vacation spot.",
+                    placeholder="Fave location",
                 ),
                 ui.tags.hr(),
             ),
@@ -49,23 +43,20 @@ app_ui = ui.page_navbar(
                 ui.tags.hr(),
                 ui.tags.ul(
                     ui.tags.li(
-                        "To explore MotorTrend Car dataset, click the 'Cars' tab."
+                        "To explore MotorTrend Car dataset, click the 'MT_Cars' tab."
                     ),
                     ui.tags.li(
                         "To explore the Penguins Dataset, click the 'Penguins' tab."
                     ),
-                    ui.tags.li(
-                        "To explore the Iris Dataset, click the 'Iris' tab."
-                    ),
                 ),
-                ui.h2("Main Panel with Reactive Output"),
+                ui.h2("Reactive Output"),
                 ui.output_text_verbatim("welcome_output"),
                 ui.output_text_verbatim("insights_output"),
             ),
         ),
     ),
     ui.nav(
-        "Cars",
+        "MT_Cars",
         ui.layout_sidebar(
             get_mtcars_inputs(),
             get_mtcars_outputs(),
@@ -76,13 +67,6 @@ app_ui = ui.page_navbar(
         ui.layout_sidebar(
             get_penguins_inputs(),
             get_penguins_outputs(),
-        ),
-    ),
-    ui.nav(
-        "Iris",
-        ui.layout_sidebar(
-            get_iris_inputs(),
-            get_iris_outputs(),
         ),
     ),
     ui.nav(ui.a("About", href="https://github.com/bambee26")),
@@ -101,19 +85,19 @@ def server(input, output, session):
     @render.text
     def welcome_output():
         user = input.name_input()
-        welcome_string = f'Hi {user}, welcome!'
+        welcome_string = f"Hello {user}!"
         return welcome_string
 
     @output
     @render.text
     def insights_output():
-        answer = input.language_input()
+        answer = input.vacation_input()
         count = len(answer)
-        language_string = f'You like {answer}. That takes {count} characters'
-        return language_string
+        vacation_string = f"You like to vacation in {answer}. That is {count} characters."
+        return vacation_string
 
     get_mtcars_server_functions(input, output, session)
     get_penguins_server_functions(input, output, session)
-    get_iris_server_functions(input, output, session)
+
 
 app = App(app_ui, server)
