@@ -19,6 +19,10 @@ from penguins_server import get_penguins_server_functions
 from penguins_ui_inputs import get_penguins_inputs
 from penguins_ui_outputs import get_penguins_outputs
 
+from iris_server import get_iris_server_functions
+from iris_ui_inputs import get_iris_inputs
+from iris_ui_outputs import get_iris_outputs
+
 from util_logger import setup_logger
 
 logger, logname = setup_logger(__name__)
@@ -45,10 +49,13 @@ app_ui = ui.page_navbar(
                 ui.tags.hr(),
                 ui.tags.ul(
                     ui.tags.li(
-                        "To explore MotorTrend Car dataset, click the 'MT_Cars' tab."
+                        "To explore MotorTrend Car dataset, click the 'Cars' tab."
                     ),
                     ui.tags.li(
                         "To explore the Penguins Dataset, click the 'Penguins' tab."
+                    ),
+                    ui.tags.li(
+                        "To explore the Iris Dataset, click the 'Iris' tab."
                     ),
                 ),
                 ui.tags.hr(),
@@ -61,7 +68,7 @@ app_ui = ui.page_navbar(
         ),
     ),
     ui.nav(
-        "MT_Cars",
+        "Cars",
         ui.layout_sidebar(
             get_mtcars_inputs(),
             get_mtcars_outputs(),
@@ -74,12 +81,19 @@ app_ui = ui.page_navbar(
             get_penguins_outputs(),
         ),
     ),
+    ui.nav(
+        "Iris",
+        ui.layout_sidebar(
+            get_penguins_inputs(),
+            get_penguins_outputs(),
+        ),
+    ),
     ui.nav(ui.a("About", href="https://github.com/bambee26")),
     ui.nav(ui.a("GitHub", href="https://github.com/bambee26/cintel-03-data")),
     ui.nav(ui.a("App", href="https://bambee26.shinyapps.io/cintel-03-data/")),
     ui.nav(ui.a("Examples", href="https://shinylive.io/py/examples/")),
     ui.nav(ui.a("Themes", href="https://bootswatch.com/")),
-    title=ui.h1("Case Dashboard"),
+    title=ui.h1("Bambee's Dashboard"),
 )
 
 
@@ -103,6 +117,6 @@ def server(input, output, session):
 
     get_mtcars_server_functions(input, output, session)
     get_penguins_server_functions(input, output, session)
-
+    get_iris_server_functions(input, output, session)
 
 app = App(app_ui, server)
