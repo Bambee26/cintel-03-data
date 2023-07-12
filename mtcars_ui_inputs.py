@@ -20,6 +20,13 @@ def get_mtcars_inputs():
             max=35,
             value=[10, 35],
         ),
+         ui.input_slider(
+            "gear",
+            "Number of Gears (gear)",
+            min=3,
+            max=5,
+            value=[1, 5],
+        ),
         ui.tags.hr(),
         ui.tags.section(
             ui.h3("MT Cars Table"),
