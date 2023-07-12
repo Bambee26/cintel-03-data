@@ -46,8 +46,8 @@ def get_iris_server_functions(input, output, session):
         """
         plt = sns.scatterplot(
             data=original_df,
-            x="sepal_length",
-            y="sepal_width",
+            x="sep_len",
+            y="sep_wid",
         )
         return plt
 
