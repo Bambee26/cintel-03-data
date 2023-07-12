@@ -40,7 +40,7 @@ app_ui = ui.page_navbar(
                 ui.input_text(
                     "language_input",
                     "What are your favorite language(s)",
-                    placeholder="Favorite Programming Language(s)",
+                    placeholder="Fave Language(s)",
                 ),
                 ui.tags.hr(),
             ),
