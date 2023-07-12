@@ -51,12 +51,9 @@ app_ui = ui.page_navbar(
                         "To explore the Penguins Dataset, click the 'Penguins' tab."
                     ),
                 ),
-                ui.tags.hr(),
                 ui.h2("Main Panel with Reactive Output"),
-                ui.tags.hr(),
                 ui.output_text_verbatim("welcome_output"),
                 ui.output_text_verbatim("insights_output"),
-                ui.tags.hr(),
             ),
         ),
     ),
