@@ -20,8 +20,8 @@ from penguins_ui_inputs import get_penguins_inputs
 from penguins_ui_outputs import get_penguins_outputs
 
 from iris_server import get_iris_server_functions
-from iris_ui_inputs import get_iris_inputs
-from iris_ui_outputs import get_iris_outputs
+#from iris_ui_inputs import get_iris_inputs
+#from iris_ui_outputs import get_iris_outputs
 
 from util_logger import setup_logger
 
