@@ -31,7 +31,7 @@ app_ui = ui.page_navbar(
             ui.panel_sidebar(
                 ui.h2("Sidebar Panel"),
                 ui.tags.hr(),
-                ui.h3("User Interaction Here"),
+                ui.h3("Let's get to know you!"),
                 ui.input_text("name_input", "Hi! What's your name?", placeholder="Your Name"),
                 ui.input_text(
                     "language_input",
