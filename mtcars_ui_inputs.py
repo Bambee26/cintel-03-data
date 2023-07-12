@@ -20,12 +20,12 @@ def get_mtcars_inputs():
             max=35,
             value=[10, 35],
         ),
-         ui.input_slider(
+        ui.input_numeric("hp", "Gross Horsepower:", value=335.0),
+        ui.input_radio_buttons(
             "gear",
-            "Number of Gears (gear)",
-            min=3,
-            max=5,
-            value=[1, 5],
+            "Select number of gears",
+            {"3": "Three", "4": "Four", "5": "Five"},
+            selected="3",
         ),
         ui.tags.hr(),
         ui.tags.section(
